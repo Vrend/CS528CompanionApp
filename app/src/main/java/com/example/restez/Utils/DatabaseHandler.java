@@ -27,8 +27,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String QUERY_NAME = "queryy";
     private static final String PACKAGE_NAME = "packageName";
 
-    private static final String CREATE_APP_TABLE = "CREATE TABLE app(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "APP_NAME TEXT, STATUS INTEGER, TYPE TEXT, QUERY_NAME TEXT, PACKAGE_NAME TEXT)";
+//    private static final String CREATE_APP_TABLE = "CREATE TABLE app(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+//            "APP_NAME TEXT, STATUS INTEGER, TYPE TEXT, QUERY_NAME TEXT, PACKAGE_NAME TEXT)";
+
+    private static final String CREATE_APP_TABLE = String.format("CREATE TABLE app(%s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s INTEGER, %s TEXT, %s TEXT, %s TEXT)", ID, APP_NAME, STATUS, TYPE, QUERY_NAME, PACKAGE_NAME);
+
 
     private SQLiteDatabase db;
 
@@ -39,6 +42,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.i("THIS SHOULD BE CALLED", "THIS SHOULD BE CALLED");
+        System.out.println(CREATE_APP_TABLE);
         db.execSQL(CREATE_APP_TABLE);
     }
 
@@ -57,6 +61,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put(TYPE, app.getType());
         cv.put(QUERY_NAME, app.getSearch());
         cv.put(STATUS, 0);
+        cv.put(PACKAGE_NAME, app.getPackageName());
         db.insert(APP_TABLE, null, cv);
     }
 
@@ -78,6 +83,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                         app.setType(cur.getInt(cur.getColumnIndex(TYPE)));
                         app.setSearch(cur.getString(cur.getColumnIndex(QUERY_NAME)));
                         app.setStatus(cur.getInt(cur.getColumnIndex(STATUS)));
+                        app.setPackageName(cur.getString(cur.getColumnIndex(PACKAGE_NAME)));
                         appList.add(app);
                     } while (cur.moveToNext());
                 }

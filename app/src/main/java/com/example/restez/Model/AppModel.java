@@ -47,7 +47,7 @@ public class AppModel {
         this.name = name;
     }
 
-    public String getPackageName() {return name;}
+    public String getPackageName() {return packageName;}
 
     public void setPackageName(String packageName) {
         this.packageName = packageName;

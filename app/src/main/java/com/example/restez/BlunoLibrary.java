@@ -302,7 +302,7 @@ public abstract class BlunoLibrary extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
-            System.out.println("mGattUpdateReceiver->onReceive->action="+action);
+//            System.out.println("mGattUpdateReceiver->onReceive->action="+action);
             if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
                 mConnected = true;
                 mHandler.removeCallbacks(mConnectingOverTimeRunnable);
@@ -347,7 +347,7 @@ public abstract class BlunoLibrary extends Activity {
                 }
 
 
-                System.out.println("displayData "+intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+//                System.out.println("displayData "+intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
 
 //            	mPlainProtocol.mReceivedframe.append(intent.getStringExtra(BluetoothLeService.EXTRA_DATA)) ;
 //            	System.out.print("mPlainProtocol.mReceivedframe:");
