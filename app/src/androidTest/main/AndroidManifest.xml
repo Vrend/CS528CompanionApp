@@ -45,7 +45,6 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-        <service android:name="com.example.restez.BluetoothLeService" android:enabled="true"/>
 
 
     </application>

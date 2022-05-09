@@ -1,4 +1,4 @@
-package com.example.cs528companionapp;
+package com.example.restez;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.cs528companionapp", appContext.getPackageName());
+        assertEquals("com.example.restez", appContext.getPackageName());
     }
 }

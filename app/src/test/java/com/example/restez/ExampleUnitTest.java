@@ -1,4 +1,4 @@
-package com.example.cs528companionapp;
+package com.example.restez;
 
 import org.junit.Test;
 

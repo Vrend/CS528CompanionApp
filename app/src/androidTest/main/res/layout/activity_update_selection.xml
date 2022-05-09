@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+    >
+
+    <TextView
+    android:id="@+id/header"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Choose one of three types:"
+    android:layout_marginTop="90dp"
+    />
+
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="110dp"
+    android:id="@+id/monitor_type"
+    >
+
+    <RadioButton android:id="@+id/contains"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contains"
+        />
+    <RadioButton android:id="@+id/isExactly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exactly"
+        android:layout_marginLeft="10dp"
+        />
+    <RadioButton android:id="@+id/anything"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anything"
+        android:layout_marginLeft="10dp"
+        />
+</RadioGroup>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/monitor_type"
+    android:id="@+id/query"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish Editing"
+        android:layout_below="@id/query"
+        android:id="@+id/finished"
+        />
+
+</RelativeLayout>
