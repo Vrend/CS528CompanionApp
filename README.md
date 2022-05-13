@@ -15,3 +15,5 @@ the state is set to "in motion", otherwise it is "at rest"
 When wearable is "at rest", then the app will send a vibration to the wearable when a priority notification arrives.
 
 Priority notifications can be selected in the app by using the "+" button and selecting an app along with a string qualifier
+
+Script for the wearable can be found [here](https://github.com/Vrend/CS528DataCollection/blob/CS228DataCollect/Arduino/sketch_apr25b/sketch_apr25b.ino)
